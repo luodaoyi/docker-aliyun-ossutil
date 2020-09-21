@@ -1,8 +1,6 @@
-FROM python:3-alpine
+FROM python:3-slim
 
-RUN apk add --no-cache --virtual .build-deps gcc musl-dev \
-    && pip install cython \
-    && apk del .build-deps gcc musl-dev
+RUN pip install --no-cache-dir aliyun-python-sdk-cdn aliyun-python-sdk-core
     
 ENV PATH /usr/local/bin:$PATH
 ENV OSSUTIL_VERSION 1.6.19
