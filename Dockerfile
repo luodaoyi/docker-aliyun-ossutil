@@ -7,3 +7,4 @@ RUN pip install --no-cache-dir aliyun-python-sdk-cdn aliyun-python-sdk-core
 
 ADD http://gosspublic.alicdn.com/ossutil/${OSSUTIL_VERSION}/ossutil64 /usr/local/bin/ossutil
 RUN chmod a+x /usr/local/bin/ossutil
+ENTRYPOINT ["/usr/local/bin/ossutil"]
