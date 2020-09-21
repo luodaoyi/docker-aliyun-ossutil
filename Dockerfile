@@ -1,4 +1,4 @@
-FROM alpine
+FROM python:3-alpine
 ENV PATH /usr/local/bin:$PATH
 ENV OSSUTIL_VERSION 1.6.19
 RUN apk add --no-cache ca-certificates
